@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Результаты анализа
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Топ-50 слов</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Слово</th>
+                <th>TF</th>
+                <th>IDF</th> 
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in results %}
+            <tr>
+                <td>{{ item.word }}</td>
+                <td>{{ "%.5f"|format(item.tf) }}</td>
+                <td>{{ "%.5f"|format(item.idf) }}</td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-primary mb-3">Назад</a>
+</div>
+{% endblock %}

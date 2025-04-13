@@ -1,0 +1,14 @@
+ 
+.custom-file-upload {
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 6px 12px;
+	cursor: pointer;
+	background-color: #006d77; /* Синий цвет Bootstrap */
+	color: white;
+	border-radius: 0.25rem; /* Закругление углов Bootstrap */
+}
+
+.custom-file-upload:hover {
+	background-color: #edf6f9; /* Более темный синий при наведении */
+}

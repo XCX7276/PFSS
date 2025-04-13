@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5  ">
+	<div class="row justify-content-center ">
+		<div class="col-md-5">
+			<div class="card p-4"> 
+				<h1 class="card-title text-center mb-4 ">Загрузка файла</h1>
+				<form method="post" enctype="multipart/form-data">
+					<div class="mb-3">
+						<label for="file" class="form-label">Выберите текстовый файл</label>
+
+						<input class="form-control" type="file" id="file" name="file" accept=".txt, .docx, .doc" required>
+
+						<div id="fileHelp" class="form-text">Допустимые форматы: .txt, .docx, .doc</div>
+					</div>
+					<div class="d-grid gap-2">
+						<button type="submit" class="btn btn-primary">Загрузить и обработать на сервере</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
